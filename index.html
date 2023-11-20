@@ -11,12 +11,42 @@
             height: 960px;
             flex-direction: column;
         }
+        #button {
+            margin: 15px;
+        }
     </style>
 </head>
 <body>
+    <button id="button">number of squares</button>
     <div id="container"></div>
     <script>
         const container = document.querySelector('#container');
+        const button = document.querySelector('#button');
+        button.addEventListener('click', () => {
+            let clicked = Number(prompt("enter a number"));
+            if (clicked > 100) {
+                return alert("error");
+            }
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+            for (let i = 0; i < clicked; i++) {
+            const div = document.createElement('div');
+            div.style.background = "linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%)";
+            div.style.display = "flex";
+            div.style.flex = "1";           
+            container.appendChild(div);
+        for (let j = 0; j < clicked; j++) {    
+            const div1 = document.createElement('div');
+            div1.style.background = "linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%)";
+            div1.style.flex = "1";           
+            div.appendChild(div1);
+            div1.addEventListener('mouseover', () => {
+                div1.style.background = "white";
+            })
+        }
+        }
+        })
         for (let i = 0; i < 16; i++) {
             const div = document.createElement('div');
             div.style.background = "linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%)";
