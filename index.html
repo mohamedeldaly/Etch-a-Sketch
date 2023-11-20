@@ -42,7 +42,10 @@
             div1.style.flex = "1";           
             div.appendChild(div1);
             div1.addEventListener('mouseover', () => {
-                div1.style.background = "white";
+                let random = Math.floor(Math.random() * 256);
+                let random1 = Math.floor(Math.random() * 256);
+                let random2 = Math.floor(Math.random() * 256);
+                div1.style.background = `rgb(${random}, ${random1}, ${random2})`;
             })
         }
         }
@@ -59,7 +62,10 @@
             div1.style.flex = "1";           
             div.appendChild(div1);
             div1.addEventListener('mouseover', () => {
-                div1.style.background = "white";
+                let random = Math.floor(Math.random() * 256);
+                let random1 = Math.floor(Math.random() * 256);
+                let random2 = Math.floor(Math.random() * 256);
+                div1.style.background = `rgb(${random}, ${random1}, ${random2})`;
             })
         }
         }
